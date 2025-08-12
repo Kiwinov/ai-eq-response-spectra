@@ -60,41 +60,21 @@ uv sync
 
 ## 🧠 Training
 
-1. Place your earthquake response spectrum data in the `data/` folder.
-   Data should be in the form of **period (s)** vs. **log(acceleration)** values for each record.
-2. Run the training script:
+1. Place your earthquake response spectrum data in the `data/` folder. Please refer to the alraedy existing `.npy` files.
+2. Run the training via the Jupyter Notebook:
 
 ```bash
-uv run python src/train.py
+uv run python src/CGAN.ipynb
 ```
 
-3. Checkpoints will be saved in the `models/` directory.
+3. Checkpoints will be saved in the `models/intermediate` directory.
 
 ---
 
 ## 📈 Evaluation
 
-To evaluate the model on the test set:
+The evaluation script is at the end of `src/CGAN.ipynb` file.
 
-```bash
-uv run python src/evaluate.py
-```
-
-This will print metrics including **R² score** (expected: \~0.9121 on the provided test set).
-
----
-
-## 🎨 Generation
-
-To generate new response spectra conditioned on input labels:
-
-```bash
-uv run python src/generate.py --label_file path/to/labels.npy --output_dir generated/
-```
-
-The generated spectra will be output as **period (s)** vs. **log(acceleration)** arrays.
-
----
 
 ## 🛠 Novel Loss Function
 
