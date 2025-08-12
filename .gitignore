@@ -1,0 +1,5 @@
+.models/
+.DS_Store
+data/processed.csv
+data/accelerations_csv
+docs
