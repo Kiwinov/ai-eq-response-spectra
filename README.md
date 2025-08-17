@@ -27,12 +27,12 @@ On the entire test set, the model achieved an **R² score of 0.9121**, demonstra
 
 ---
 
-## 🚀 Installation
+## Installation
 
 This project uses [`uv`](https://github.com/astral-sh/uv) for fast Python dependency management.  
 You must have **Python 3.9+** installed.
 
-### 1. Install `uv`
+1. Install `uv`
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ````
@@ -43,14 +43,14 @@ Or, if using Windows (PowerShell):
 irm https://astral.sh/uv/install.ps1 | iex
 ```
 
-### 2. Clone the repository
+2. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/earthquake-cgan.git
 cd earthquake-cgan
 ```
 
-### 3. Install dependencies
+3. Install dependencies
 
 ```bash
 uv sync
@@ -58,7 +58,7 @@ uv sync
 
 ---
 
-## 🧠 Training
+## Training
 
 1. Place your earthquake response spectrum data in the `data/` folder. Please refer to the alraedy existing `.npy` files.
 2. Run the training via the Jupyter Notebook:
@@ -71,12 +71,12 @@ uv run python src/CGAN.ipynb
 
 ---
 
-## 📈 Evaluation
+## Evaluation
 
 The evaluation script is at the end of `src/CGAN.ipynb` file.
 
 
-## 🛠 Novel Loss Function
+## Novel Loss Function
 
 The total loss function used in training is:
 
@@ -89,10 +89,4 @@ Where:
 * `BCE_GAN` — binary cross-entropy for adversarial training.
 * `SmoothnessLoss` — penalizes large second derivatives to encourage smooth spectral curves.
 * `MSE` — enforces similarity to ground truth spectra.
-
----
-
-## 📜 License
-
-MIT License. See `LICENSE` for details.
 
