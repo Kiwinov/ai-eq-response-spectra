@@ -11,7 +11,7 @@ On the entire test set, the model achieved an **R² score of 0.9121**, demonstra
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 
